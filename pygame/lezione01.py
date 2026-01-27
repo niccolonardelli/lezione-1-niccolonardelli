@@ -25,6 +25,11 @@ while running:
         y -= speed
     if keys[pygame.K_DOWN]:
         y += speed
+
+    if x > 640 - x:
+       x = 640
+    if y > 480 - y :
+       y = 480
     
     screen.fill((30, 30, 50))
     pygame.draw.circle(screen, (255, 100, 100), (x, y), 30)
